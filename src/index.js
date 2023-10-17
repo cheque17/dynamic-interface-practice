@@ -1,5 +1,11 @@
 import "./style.css";
 
-console.log("Hi")
+const trigger = document.querySelector('.trigger');
+console.log(trigger)
 
-console.log('Hi, again')
+const list = document.querySelector('.dropdown');
+console.log(list)
+
+trigger.addEventListener('click', () => {
+  list.classList.toggle('active');
+})

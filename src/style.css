@@ -25,5 +25,53 @@ html, body {
 
 header, footer {
   height: 10vh;
-  background-color: aquamarine;
+  background-color: rgb(177, 255, 229);
+}
+
+main {
+  height: 80vh;
+  background-color: rgb(236, 255, 151);
+}
+
+main nav {
+	width: 100%;
+	background-color: bisque;
+}
+
+main nav ul {
+	list-style: none;
+}
+
+main nav ul.main-list {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+main nav ul.main-list>li{
+	padding: 20px 10px;
+	position: relative;
+}
+
+main nav ul.main-list li:last-child:hover{
+	background-color: rgb(255, 174, 142);
+}
+
+main nav ul.main-list li:last-child .dropdown {
+	background-color: rgb(255, 185, 99);
+	position: absolute;
+	bottom: 4px;
+	display: none;
+	transition: transform 300ms ease-in-out;
+}
+
+main nav ul.main-list li:last-child .dropdown li {
+	margin: 15px 0;
+	padding: 10px 5;
+}
+
+
+main nav ul.main-list li:last-child .dropdown.active{
+	display: block;
+	transform: translate(0, 150px);
 }
