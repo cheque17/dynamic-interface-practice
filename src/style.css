@@ -75,3 +75,21 @@ main nav ul.main-list li:last-child .dropdown.active{
 	display: block;
 	transform: translate(0, 150px);
 }
+
+.carrousel-container {
+	width: 100%;
+	height: 80%;
+	display: flex;
+}
+
+.carrousel-container .arrow-cont {
+	width: 10vw;
+	background-color: white;
+	height: 100%;
+}
+
+.carrousel-container .image-slider{
+	background-color: aquamarine;
+	width: 80vw;
+	height: 100%;
+}
