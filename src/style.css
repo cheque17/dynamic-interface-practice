@@ -36,6 +36,9 @@ main {
 main nav {
 	width: 100%;
 	background-color: bisque;
+	height: 4vh;
+	display: flex;
+	align-items: center;
 }
 
 main nav ul {
@@ -49,7 +52,6 @@ main nav ul.main-list {
 }
 
 main nav ul.main-list>li{
-	padding: 20px 10px;
 	position: relative;
 }
 
@@ -60,7 +62,7 @@ main nav ul.main-list li:last-child:hover{
 main nav ul.main-list li:last-child .dropdown {
 	background-color: rgb(255, 185, 99);
 	position: absolute;
-	bottom: 4px;
+	bottom: 0;
 	display: none;
 	transition: transform 300ms ease-in-out;
 }
@@ -73,7 +75,7 @@ main nav ul.main-list li:last-child .dropdown li {
 
 main nav ul.main-list li:last-child .dropdown.active{
 	display: block;
-	transform: translate(0, 150px);
+	transform: translate(0, 229px);
 }
 
 .carrousel-container {
@@ -88,8 +90,37 @@ main nav ul.main-list li:last-child .dropdown.active{
 	height: 100%;
 }
 
+.carrousel-container .arrow-cont {
+	display: flex;
+	align-items: center;
+}
+
+.carrousel-container .arrow-cont img {
+	object-fit: contain;
+  width: 20vh
+}
+
 .carrousel-container .image-slider{
 	background-color: aquamarine;
 	width: 80vw;
 	height: 100%;
 }
+
+.carrousel-container .image-slider .image-display {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.carrousel-container .image-slider .image-display.showing img{
+	display: block;
+}
+
+.carrousel-container .image-slider .image-display img{
+	width: 60%;
+	object-fit: contain;
+	display: none;
+}
+
