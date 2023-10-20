@@ -114,13 +114,17 @@ main nav ul.main-list li:last-child .dropdown.active{
 	align-items: center;
 }
 
-.carrousel-container .image-slider .image-display.showing img{
+.carrousel-container .image-slider .image-display.showing{
 	display: block;
 }
+
+.carrousel-container .image-slider .image-display {
+	display: none;
+}
+
 
 .carrousel-container .image-slider .image-display img{
 	width: 60%;
 	object-fit: contain;
-	display: none;
 }
 
