@@ -128,3 +128,24 @@ main nav ul.main-list li:last-child .dropdown.active{
 	object-fit: contain;
 }
 
+main>div:last-child {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 1vw;
+}
+
+.dot-container {
+	display: flex;
+	justify-content: space-between;
+	width: 20vw;
+}
+
+.dot-container .dot {
+	height: 13px;
+	width: 13px;
+	border: 1px black solid;
+	border-radius: 50%;
+	
+}
+

@@ -1,14 +1,9 @@
 import "./style.css";
+import changeImage from './DOM-manipulation'
 
 document.querySelector(".trigger").addEventListener("click", () => {
   document.querySelector(".dropdown").classList.toggle("active");
 });
-
-function changeImage (imagesNode, currentImage, newIndexNumber) {
-  const target = imagesNode;
-  target[currentImage].classList.toggle('showing');
-  target[newIndexNumber].classList.toggle('showing')
-}
 
 
 const images = document.querySelectorAll(".image-display");
@@ -37,6 +32,14 @@ document.querySelector('#next').addEventListener('click', () => {
     changeImage(images, currentImage, newIndexNumber);
     currentImage = newIndexNumber;
   }
+})
+
+document.querySelectorAll('.dot').forEach((button) =>{
+  button.addEventListener('click', (e) => {
+    const newIndexNumber = Number(e.target.attributes.name.value.slice(-1));
+    changeImage(images,currentImage, newIndexNumber);
+    currentImage = newIndexNumber;
+  })
 })
 
 console.log(images);
