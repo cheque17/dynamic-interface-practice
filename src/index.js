@@ -42,4 +42,15 @@ document.querySelectorAll('.dot').forEach((button) =>{
   })
 })
 
-console.log(images);
+function slideAutomatically () {
+  let newIndexNumber = currentImage + 1;
+  if (newIndexNumber > 3){
+    newIndexNumber = 0;
+  }
+  changeImage(images, currentImage, newIndexNumber);
+  currentImage = newIndexNumber;
+
+  setTimeout(slideAutomatically, 5000);
+}
+
+slideAutomatically();
